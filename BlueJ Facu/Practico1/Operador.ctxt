@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Operador
+comment0.text=\r\n1.\ Crear\ la\ clase\ ejecutable\ \u201COperador\u201D,\ que\ contenga\ el\ m\u00E9todo\ main().\ \r\n\ En\ \u00E9l\ declarar\ las\ variables\ a\ y\ b\ de\ tipo\ entero.\r\n\ Inicializarlas\ con\ los\ valores\ 8\ y\ 3\ respectivamente.\ \r\n\ Realizar\ y\ mostrar\ por\ pantalla\ las\ siguientes\ operaciones\ aritm\u00E9ticas\:\r\n\ suma,\ resta,\ multiplicaci\u00F3n,\ divisi\u00F3n\ y\ resto.\r\n\ \r\n\ @author\ (Saul\ Agustin\ Arnica)\ \r\n\ @version\ (1)\r\n
+comment1.params=args
+comment1.target=void\ Main(java.lang.String[])
+numComments=2
