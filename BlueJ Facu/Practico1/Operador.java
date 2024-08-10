@@ -1,4 +1,4 @@
-
+    
 /**
 *1. Crear la clase ejecutable “Operador”, que contenga el método main(). 
  En él declarar las variables a y b de tipo entero.
