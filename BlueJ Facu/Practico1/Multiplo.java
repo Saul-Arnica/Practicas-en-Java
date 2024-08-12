@@ -6,10 +6,6 @@ números múltiplos de 4 a partir de 42 y hasta el 150 inclusive. Usar la instru
  * @version (1)
  */
 public class Multiplo {
-    
-    private static int a;
-    private static int b;
-    
     public static void main(String[] args) {
         System.out.println("Los multiplos de 4 a partir de 42 son:");
         for(int i = 42;i <= 150;i++){

@@ -1,33 +1,33 @@
 
-/**
- * Write a description of class TriRectangulo here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class TriRectangulo
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class TriRectangulo {
 
-    /**
-     * Constructor for objects of class TriRectangulo
-     */
-    public TriRectangulo()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    private static double a, b, c, hipotenusa;
+    private static double cateto1, cateto2;
+    public static void main(String[] args) {
+        
+        if(args.length > 0) {
+            a = Double.parseDouble(args[0]);
+            b = Double.parseDouble(args[1]);
+            c = Double.parseDouble(args[2]);
+            hipotenusa = Math.max(a , Math.max(b , c));
+            //tambien se puede utilizar un switch
+            if(hipotenusa == a) {
+                cateto1 = b;
+                cateto2 = c;
+            }else if(hipotenusa == b) {
+                cateto1 = a;
+                cateto2 = c;
+            }else{
+                cateto1 = a;
+                cateto2 = b;
+            }
+            if(Math.pow(hipotenusa, 2) == Math.pow(cateto1, 2) + Math.pow(cateto2, 2)){
+                System.out.println("El triangulo es rectangulo.");
+            }else{
+                System.out.println("El triangulo no es rectangulo.");
+            }
+        }else{
+            System.out.println("No se ingreso nada en los argumentos del main.");
+        }
+    }   
 }
