@@ -1,9 +1,15 @@
+/**
+ * 6_ Crear una clase denominada TrianguloRectangulo, en la que se determine si un triangulo es rectángulo (Teorema de Pitágoras → h2 = cateto1^2 + cateto2^2). 
+ * Los lados se deben ingresar por teclado, utilizando el argumento del main(). 
+ * Nota: probar con hipotenusa = 5; cateto1 = 3; cateto2 = 4;
+ * @author (Saul Agustin Arnica)
+ * @version (18/8/24)
+*/
 
-public class TriRectangulo {
-
-    private static double a, b, c, hipotenusa;
-    private static double cateto1, cateto2;
+public class TrianguloRectangulo {
     public static void main(String[] args) {
+        double a, b, c, hipotenusa;
+        double cateto1, cateto2;
         
         if(args.length > 0) {
             a = Double.parseDouble(args[0]);

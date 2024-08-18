@@ -1,18 +1,16 @@
 
 /**
- *3. Crear una clase ejecutable denominada “Circunferencia”, en la que se calcule el perímetro de una circunferencia, 
+ *  3_ Crear una clase ejecutable denominada “Circunferencia”, en la que se calcule el perímetro de una circunferencia, 
     ingresando el radio de tipo entero a través del argumento del main().
  * 
- * @author (Saul Agustin Arnica) 
- * @version (1)
+ *@author (Saul Agustin Arnica)
+ *@version (18/8/24)
  */
 public class Circunferencia {
-    
-    private static int radio;
-    private static float perimetro;
-    private static final float PI = 3.14F;
-    
     public static void main(String[] args) {
+        int radio;
+        double perimetro;
+        double PI = Math.PI;
         if(args.length > 0) {
             radio = Integer.parseInt(args[0]);
             perimetro = 2 * PI * radio;

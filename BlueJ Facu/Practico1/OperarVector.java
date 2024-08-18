@@ -1,3 +1,11 @@
+/**
+ * 8_ Crear una clase denominada OperarVector que permita ingresar por teclado (Scanner) 5 notas de alumnos, las que serán almacenadas en un array de enteros. 
+ * Calcular el promedio y determinar la mayor nota. El promedio debe permitir resultado con decimales (aplicar cast a los elementos enteros cuando sea necesario para obtener dicho resultado). 
+ * Mostrar los elementos ingresados, separados por un tabulador. 
+ * Mostrar el promedio y la mayor nota con el mensaje respectivo. 
+ * @author (Saul Agustin Arnica)
+ * @version (18/8/24)
+*/
 import java.util.Scanner;
 
 public class OperarVector {
@@ -10,8 +18,8 @@ public class OperarVector {
             System.out.println("Ingrese la nota"+ (i + 1) + ":");
             A_notas[i] = ingreso.nextInt();
         }
-
         ingreso.close();
+        
         float promedio = 0;
         int maxNota = 0;
 

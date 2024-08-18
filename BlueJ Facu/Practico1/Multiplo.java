@@ -1,9 +1,9 @@
 
 /**
- * 2. Crear la clase “Multiplo”, que contenga el método main(), en el que se determinen y muestren por pantalla los 
-números múltiplos de 4 a partir de 42 y hasta el 150 inclusive. Usar la instrucción iterativa más apropiada.
- * @author (Saul Agustin Arnica) 
- * @version (1)
+ *  2_ Crear la clase “Multiplo”, que contenga el método main(), en el que se determinen y muestren por pantalla los
+ *  números múltiplos de 4 a partir de 42 y hasta el 150 inclusive. Usar la instrucción iterativa más apropiada.
+ *  @author (Saul Agustin Arnica)
+ *  @version (18/8/24)
  */
 public class Multiplo {
     public static void main(String[] args) {
