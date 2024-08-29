@@ -1,26 +1,22 @@
 /**
- * En la clase Cliente, el método agregaSaldo(p_importe) agrega p_importe al saldo actual (lo actualiza) y devuelve el nuevo saldo. 
- * El método nuevoSaldo(p_importe) reemplaza el saldo actual por p_importe y devuelve el nuevo saldo. 
- * La salida impresa del método mostrar() debe ser la siguiente: (los valores en negrita dependen del estado del objeto).
- * - Cliente -
- * Nombre y Apellido: Juan Perez (24444333)
- * Saldo: $200.00
+ * Esta clase, es la abstraccion de un cliente.
  * 
  * @author Saul Agustin Arnica
  * @version 14/8/24
  */
 public class Cliente {
 
-    private int nroDNI;
+    private int nroDNI; 
     private String apellido;
     private String nombre;
     private double saldo;
+
     /**
      * Constructor de la clase.
      * @param p_dni Documento Nacionl de Identidad
-     * @param p_apellido Apellido del cliente.
-     * @param p_nombre Nombre del cliente
-     * @param p_importe Saldo a cargar
+     * @param p_apellido 
+     * @param p_nombre 
+     * @param p_importe 
      */
     public Cliente(int p_dni, String p_apellido, String p_nombre, double p_importe) {
         this.setApellido(p_apellido);
@@ -63,7 +59,7 @@ public class Cliente {
     }
 
     public double agregarSaldo(double p_importe) {
-        this.saldo = saldo + p_importe;
+        this.saldo = this.getSaldo() + p_importe;
         return this.saldo;
     }
 

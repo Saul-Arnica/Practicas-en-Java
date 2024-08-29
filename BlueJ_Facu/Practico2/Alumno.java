@@ -1,13 +1,6 @@
 /**
- * It is wanted to get the average of grade points of Object Oriented Programming students. 
- * For this, the abstract concept "pupil" is modeled. 
- * When an instance of Alumno is created, as grade points are not known yet, they are initialized in zero. 
- * The method promedio() returns the average of student's grade points. 
- * The method aprueba() returns true or false
- * according to whether the student's grade points average is greate than 7.0 and if both grade points are equal or greater than 6.0. 
- * The method leyendaAprueba() returns a string APROBADO or DESAPROBADO according to the method aprueba() returns. 
- * The printed output of the method mostrar() must be: (boldedvalues show internal state of object)
- * 
+ * En esta clase, abstraemos lo que seria un alumno con sus atributos, desde su identificacion para con la facultad,
+ * hasta la nota de 2 de sus parciales en la materia Programacion Orientada a Objetos.
  * @author (Saul Agustin Arnica)  
  * @version (15/8/24)
  */
@@ -19,7 +12,6 @@ public class Alumno {
     private double nota1;
     private double nota2;
     /**
-     * Constructor de la clase Alumno con sus respectivos parametros que recibe.
      * @param p_lu  Libreta Universitaria
      * @param p_nombre  
      * @param p_apellido
@@ -30,10 +22,10 @@ public class Alumno {
         this.setLU(p_lu);
         this.setNombre(p_nombre);
         this.setApellido(p_apellido);
-        this.setNota1(p_nota1);
-        this.setNota2(p_nota2);
+        this.setNota1(0);
+        this.setNota2(0);
     }   
-
+    //Setter's para los atributos de la clase.
     private void setLU(int p_lu) {
         this.lu = p_lu;
     }
@@ -53,6 +45,8 @@ public class Alumno {
     public void setNota2(double p_nota2) {
         this.nota2 = p_nota2;
     }
+
+    //Getter's para obtener el valor interno de los atributos de la clase de manera segura.
     public String getNombre() {
         return this.nombre;
     }

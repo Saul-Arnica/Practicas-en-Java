@@ -1,4 +1,3 @@
-
 /**
  * Esta clase es encargada de ejecutar o probar, la clase Laboratorio, al tener 2 constructores, probamos ambos en el mismo "ejecutable"
  */

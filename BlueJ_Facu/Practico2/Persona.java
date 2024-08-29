@@ -1,41 +1,36 @@
 import java.util.*;
 /**
- * El diagrama de clase adjunto representa una abstracción del concepto “persona”. 
- * Implemente en java la clase Persona. 
- * El método edad() devuelve la cantidad de años cumplidos a la fecha, considerando para el cálculo sólo la diferencia entre años. 
- * La salida impresa del método mostrar() debe ser la siguiente (los valores en negrita dependen del estado del objeto):
- * Nombre y Apellido: Juan Perez
- * DNI: 35123456 Edad: 22 años
- * Nota: Para trabajar con fechas, agregar: import java.util.*;
- * Para saber el año actual usar:
- * Calendar fechaHoy = new GregorianCalendar();
- * int anioHoy = fechaHoy.get(Calendar.YEAR);
+ * En esta clase, representaremos la abstraccion de una persona, tendremos como atributos:
+ * -su numero de documento
+ * -su nombre completo.
+ * -su edad, a partir de su año de nacimiento.
+ * Es preciso aclarar esto, ya que no usaremos fechas exactas para determinar su edad. solo el año actual - su año de nacimiento.
  * 
- * @author (Saul Agustin Arnica) 
- * @version (1)
+ * @author Saul Agustin Arnica 
+ * @version 23/8/24
  */
 //Aca declaramos la clase Persona.
 public class Persona {
 
-    //Aca hago la declaracion de atributos de la clase. Claramente de manera privada para que nadie fuera de la misma pueda modificar su estado interno.
+    //Declaracion de atributos de la clase. Claramente de manera privada para que nadie fuera de la misma pueda modificar su estado interno.
     private int dni, anioNacimiento;
     private String nombre, apellido;
 
     /**
-     * Persona es el construcctor de la clase, asigna un valor a los atributos de manera segura con los setter's.
-     * @param p_dni solicitamos por paso de parametros el DNI
-     * @param p_nombre solicitamos por paso de parametros el Nombre
-     * @param p_apellido solicitamos por paso de parametros el Apellido   
-     * @param p_anio solicitamos por paso de parametros el Anio de naciomiento
+     * Constructor.
+     * @param p_dni solicitamos el Documento Nacional de Identidad.
+     * @param p_nombre 
+     * @param p_apellido 
+     * @param p_anio solicitamos el año de nacimiento.
      */
     public Persona(int p_dni, String p_nombre, String p_apellido, int p_anio) {
-        setDNI(p_dni);
-        setNombre(p_nombre);
-        setApellido(p_apellido);
-        setAnio(p_anio);
+        this.setDNI(p_dni);
+        this.setNombre(p_nombre);
+        this.setApellido(p_apellido);
+        this.setAnio(p_anio);
     }
 
-    //declaramos los setter's (Asignamos valor a los atributos de manera segura)
+    //Declaracion de los setter's (Asignamos valor a los atributos de manera segura)
     private void setDNI(int p_dni) {
         this.dni = p_dni;
     }
@@ -56,49 +51,46 @@ public class Persona {
     public int getDNI() {
         return this.dni;
     }
-    /**
-     * 
-     * @return el Nombre
-     */
+
     public String getNombre() {
         return this.nombre;
     }
-    /**
-     * 
-     * @return el Apellido
-     */
+    
     public String getApellido() {
         return this.apellido;
     }
+
+    public int getAnioNacimiento() {
+        return this.anioNacimiento;
+    }
     /**
-     * 
-     * @return la edad actual de la persona.
+     * @return la edad de la persona restando el año actual con el de su nacimiento.
      */
     public int edad() {
+
         Calendar fechaHoy = new GregorianCalendar();
         int anioHoy = fechaHoy.get(Calendar.YEAR);
         
-        return anioHoy - anioNacimiento;
+        return anioHoy - this.getAnioNacimiento();
     }
     /**
-     * 
      * @return Nombre y Apellido
      */
     public String nomYApe() {
-        return nombre + " " + apellido;
+        return this.getNombre() + " " + this.getApellido();
     }
     /**
      * 
      * @return Apellido y Nombre
      */
     public String apeYNom() {
-        return apellido + " " + nombre;
+        return this.getApellido() + " " + this.getNombre();
     }
     /**
      * Imprimimos en pantalla/consola lo solicitado.
      */
     public void mostrar() {
         System.out.println("Nombre y Apellido: "+ this.nomYApe());
-        System.out.println("DNI: " + dni + "\t" + "Edad: " + this.edad() + " Años ");
+        System.out.println("DNI: " + this.getDNI() + "\t" + "Edad: " + this.edad() + " Años ");
     }
 }

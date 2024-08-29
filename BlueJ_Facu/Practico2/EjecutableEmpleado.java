@@ -16,16 +16,19 @@ public class EjecutableEmpleado {
         Scanner ingreso = new Scanner(System.in);
 
         System.out.println("Ingrese el CUIL: ");
-        long p_cuil = ingreso.nextLong();
+        long cuil = ingreso.nextLong();
+        ingreso.nextLine();
         System.out.println("Ingrese el Apellido: ");
-        String p_apellido = ingreso.nextLine();
+        String apellido = ingreso.nextLine();
         System.out.println("Ingrese el Nombre: ");
-        String p_nombre = ingreso.nextLine();
+        String nombre = ingreso.nextLine();
         System.out.println("Ingrese el Importe: ");
-        double p_importe = ingreso.nextDouble();
+        double importe = ingreso.nextDouble();
         System.out.println("Ingrese el anio de Ingreso: ");
-        int p_anioIngreso = ingreso.nextInt();
+        int anioIngreso = ingreso.nextInt();
 
-        Empleado empleado = new Empleado(p_cuil, p_apellido,p_nombre ,p_importe ,p_anioIngreso);
+        Empleado empleado = new Empleado(cuil, apellido, nombre , importe , anioIngreso);
+        
+        empleado.mostrar();
     }
 }
