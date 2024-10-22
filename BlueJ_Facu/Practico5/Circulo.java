@@ -1,3 +1,5 @@
+package Practico5;
+
 /**
  * 
  * 
@@ -28,6 +30,9 @@ public class Circulo {
         return this.radio;
     }
 
+    public void nombreFigura() {
+        System.out.println("****** Circulo ******");
+    }
     public void desplazar(double p_dx, double p_dy) {
         this.getCentro().desplazar(p_dx, p_dy);
     }
@@ -69,3 +74,4 @@ public class Circulo {
         return elMayor;
     }
 }
+
