@@ -75,7 +75,7 @@ public class Comercio {
     // Método para imprimir la nómina (lista de empleados)
     public void nomina() {
         System.out.println("Nómina de empleados del comercio " + this.nombre + ":");
-        for (Empleado empleado : empleados.values()) {
+        for (Empleado empleado : this.getEmpleados().values()) {
             System.out.println("CUIL: " + empleado.getCuil() + " - Nombre: " + empleado.getNombre());
         }
     }
