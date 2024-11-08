@@ -6,6 +6,7 @@
 package Practico7Integrador;
 
 import java.io.*; //Aca nos olvidamos de poner biblioteca a biblioteca
+import java.nio.file.FileAlreadyExistsException;
 
 @SuppressWarnings("all")
 
@@ -27,9 +28,8 @@ public class ManejoDeArchivos {
         especifica dentro del texto a leer, esto es parecido al uso de fseek en C (para que tomen como referencia).
         */
         
-        // Luego creamos un bloque try para el manejo de excepciones que es muy comun en
-        // la entrada de datos por teclado/lectura de archivos
-        /*try {
+        //Luego creamos un bloque try para el manejo de excepciones que es muy comun en la entrada de datos por teclado/lectura de archivos
+        try {
         // Primero declaramos:
             BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
 
@@ -37,42 +37,15 @@ public class ManejoDeArchivos {
             String frase = teclado.readLine();
             System.out.println(frase);
             teclado.close();
+
+        }catch(FileAlreadyExistsException e) {
+            System.out.println("El archivo o directorio a crear ya existe!");
+        }catch(EOFException e) {
+            System.out.println("Se alcanzo inesperadamente el final del archivo o del flujo durante la entrada!");
+        }catch(FileNotFoundException e) {
+            System.out.println("No se localizo el archivo [Ruta invalida o no existe], o no se puede acceder a el por permisos");
+        }catch(IOException e) {
+            System.out.println("Ocurrio un error en la entrada o salida!");
         }
-        catch(IOException e) {
-        System.out.println("Error al leer el ingreso por teclado");
-        //Aca, nos imprime la seguidilla por asi decirlo de la entrada hasta el erro producido
-        e.printStackTrace();
-        }*/
-        
-        
-
-        
-
-        // Busqueda en archivos secuenciales y Filtros y Condiciones
-        try {
-            FileInputStream archiFIS = new FileInputStream(
-                    "C:\\Users\\saula\\WorkSpace\\Java\\BlueJ_Facu\\Practico7Integrador\\ArchivoPrueba.dat");
-
-            DataInputStream archiDIS = new DataInputStream(archiFIS);
-
-            boolean encontro = false;
-
-            while (archiDIS.available() > 0 && encontro != true) {
-                int id = archiDIS.readInt(); // Lee el ID
-                String nombre = archiDIS.readUTF(); // Lee el nombre
-
-                // Procesar solo si el ID cumple con la condición
-                if (id == 40) {
-                    System.out.println("ID: " + id + ", Nombre: " + nombre);
-                    encontro = true;
-                }
-            }
-            if(encontro == false) {
-                System.out.println("Registro no encontrado");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
 }

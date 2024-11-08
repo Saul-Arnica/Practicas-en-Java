@@ -1,6 +1,7 @@
 package Practico7Integrador;
 
 import java.io.*;
+import java.nio.file.FileAlreadyExistsException;
 
 public class LecturaDeArchivosSecuenciales {
     
@@ -19,10 +20,15 @@ public class LecturaDeArchivosSecuenciales {
         }
         archiFIS.close();
         archiDIS.close();
-        } catch(FileNotFoundException ioe) {
-        System.out.println("Archivo no encontrado.");
-        } catch(IOException e) {
-        System.out.println("Error en la apertura o cierre del archivo.");
+        
+        }catch(FileAlreadyExistsException e) {
+            System.out.println("El archivo o directorio a crear ya existe!");
+        }catch(EOFException e) {
+            System.out.println("Se alcanzo inesperadamente el final del archivo o del flujo durante la entrada!");
+        }catch(FileNotFoundException e) {
+            System.out.println("No se localizo el archivo [Ruta invalida o no existe], o no se puede acceder a el por permisos");
+        }catch(IOException e) {
+            System.out.println("Ocurrio un error en la entrada o salida!");
         }
     }
 }

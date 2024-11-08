@@ -14,7 +14,7 @@ public class EscrituraDeArchivos {
             
             //Declaramos el flujo de salida al archivo en modo "append" (agregar al final, es decir no sobreescribir)
             FileOutputStream crearArchivo = new FileOutputStream(
-            "C:\\Users\\saula\\WorkSpace\\Java\\BlueJ_Facu\\Practico7Integrador\\ArchivoPrueba.dat", true);
+            "C:\\Users\\saula\\WorkSpace\\Java\\BlueJ_Facu\\Practico7Integrador\\ArchivoOriginal.dat", true);
             
             //Luego declaramos un DataOutputStream.
             DataOutputStream grabacion = new DataOutputStream(crearArchivo);
