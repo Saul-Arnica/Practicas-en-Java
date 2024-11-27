@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=CreaFigura
-comment0.text=\r\nPor\ \u00FAltimo,\ implementar\ una\ clase\ ejecutable\ CreaFigura\ donde\ deber\u00E1\:\r\n\u2022\ crear\ un\ c\u00EDrculo\ centrado\ en\ el\ punto\ (0,\ 0)\ y\ cuyo\ radio\ surja\ de\ un\ n\u00FAmero\ aleatorio\r\n\u2022\ desplazar\ el\ c\u00EDrculo\ a\ otro\ punto\ situado\ 240\ unidades\ hacia\ la\ izquierda\ y\ 230\ hacia\ abajo\r\n\u2022\ mostrar\ las\ caracter\u00EDsticas\ del\ c\u00EDrculo\ creado\ \r\n\u2022\ crear\ otro\ c\u00EDrculo\ centrado\ en\ el\ punto\ (5.2,\ 0.5)\ y\ cuyo\ radio\ sea\ un\ nuevo\ n\u00FAmero\ aleatorio.\r\n\u2022\ mostrar\ las\ caracter\u00EDsticas\ del\ mayor\ de\ los\ dos\ c\u00EDrculos\r\n\u2022\ mostrar\ la\ distancia\ entre\ los\ dos\ c\u00EDrculos\ \r\n\u2022\ Nota\ 1\:\ A\ los\ efectos\ de\ este\ ejercicio,\ considerar\ que\ siempre\ existe\ un\ mayor\ (es\ una\ simplificaci\u00F3n\ de\ la\ realidad,\ que\ cumple\ con\ \r\nlos\ objetivos\ de\ este\ ejercicio)\r\n\u2022\ Nota\ 2\:\ para\ obtener\ un\ numero\ aleatorio\ (importar\ el\ paquete\ java.util.Random)\r\nRandom\ unNumero\ \=\ new\ Random();\r\ndouble\ radio\ \=\ unNumero.nextDouble()\ *\ 100.0;\r\n
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-numComments=2

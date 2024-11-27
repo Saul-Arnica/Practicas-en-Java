@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=Multiplo
-comment0.text=\r\n\ \ 2_\ Crear\ la\ clase\ \u201CMultiplo\u201D,\ que\ contenga\ el\ m\u00E9todo\ main(),\ en\ el\ que\ se\ determinen\ y\ muestren\ por\ pantalla\ los\r\n\ \ n\u00FAmeros\ m\u00FAltiplos\ de\ 4\ a\ partir\ de\ 42\ y\ hasta\ el\ 150\ inclusive.\ Usar\ la\ instrucci\u00F3n\ iterativa\ m\u00E1s\ apropiada.\r\n\ \ @author\ (Saul\ Agustin\ Arnica)\r\n\ \ @version\ (18/8/24)\r\n
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-numComments=2
